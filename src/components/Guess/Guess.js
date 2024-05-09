@@ -1,8 +1,7 @@
 import React from 'react';
 
-function Guess({ children }) {
-  const guessChars = [...children]
-  return <p className="guess">{guessChars.map(item => <span key={crypto.randomUUID()} className="cell">{item}</span>)}</p>;
+function Guess({ guess }) {
+  return <p className="guess">{guess.map(item => <span key={crypto.randomUUID()} className={`cell ${item.status}`}>{item.letter}</span>)}</p>;
 }
 
 export default Guess;
