@@ -17,9 +17,11 @@ function Game() {
 
   const updateGuesses = (newGuess) => {
     const newGuesses = [...guesses];
+    const updatedRemainingGuesses = NUM_OF_GUESSES_ALLOWED - newGuesses.length
+
     newGuesses.push(newGuess);
     setGuesses(newGuesses);
-    setRemainingGuesses(NUM_OF_GUESSES_ALLOWED - newGuesses.length);
+    setRemainingGuesses(updatedRemainingGuesses);
   }
 
   return <div className="game-wrapper">
