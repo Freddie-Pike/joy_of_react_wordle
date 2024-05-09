@@ -10,7 +10,7 @@ function GuessingInput({updateGuesses}) {
     updateGuesses(guess)
   }}>
     <label htmlFor="guess-input">Enter guess:</label>
-    <input id="guess-input" type="text" value={guess} pattern="\w{1,5}" required onChange={(event) => {
+    <input id="guess-input" type="text" value={guess} pattern="\w{5}" required onChange={(event) => {
       setGuess(event.target.value.toUpperCase());
       
     }} />
