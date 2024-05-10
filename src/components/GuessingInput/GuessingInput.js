@@ -5,7 +5,7 @@ function GuessingInput({updateGuesses}) {
 
   return <form className="guess-input-wrapper" onSubmit={(event) => {
     event.preventDefault();
-    console.log(`guess: ${guess}`);
+    
     setGuess('')
     updateGuesses(guess)
   }}>
