@@ -6,14 +6,10 @@ import { checkGuess } from '../../game-helpers'
 import { answer } from '../Game/Game';
 
 function GuessList({ guesses, remainingGuesses }) {
-
-  console.log(`guesses: ${guesses}`);
   return (
     <div>
       {guesses.map((guess) => {
-        console.log(`guess: ${guess}`);
         const checkedGuess = checkGuess(guess, answer);
-        console.log(checkedGuess);
         return (
           <Guess key={crypto.randomUUID()} guess={checkedGuess} / >
         )
